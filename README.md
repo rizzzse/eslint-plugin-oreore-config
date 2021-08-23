@@ -1,0 +1,1 @@
+# eslint-plugin-oreore-config
