@@ -3,7 +3,7 @@ import { WARN, always, never, warn } from "../util";
 
 const config: TSESLint.Linter.Config = {
     extends: [
-        "./configs/base",
+        "./base",
         "plugin:import/recommended",
         "plugin:import/typescript",
         "plugin:import/react",

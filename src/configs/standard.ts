@@ -2,7 +2,7 @@ import type { TSESLint } from "@typescript-eslint/experimental-utils";
 
 const config: TSESLint.Linter.Config = {
     extends: [
-        "./configs/import",
+        "./import",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
     ],
     overrides: [
