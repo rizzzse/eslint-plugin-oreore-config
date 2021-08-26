@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "name": "eslint-plugin-oreore-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rizzzse/eslint-plugin-oreore-config.git"
+  },
+  "author": "rizzzse <rizzzse@gmail.com> (https://github.com/rizzzse)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rizzzse/eslint-plugin-oreore-config/issues"
+  },
+  "homepage": "https://github.com/rizzzse/eslint-plugin-oreore-config#readme",
+  "peerDependencies": {
+    "eslint": "^7.2.0",
+    "typescript": "4.x"
+  },
+  "devDependencies": {
+    "eslint": "7.2.x",
+    "typescript": "4.0.x"
+  }
+}
