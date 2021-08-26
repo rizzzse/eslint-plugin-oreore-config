@@ -1,0 +1,43 @@
+
+name: plugin build
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - v*.*.*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - run: npm ci
+      - run: npm run build
+      - run: npm run lint
+
+      - name: Unignore dist
+        run: sed -e "/dist/d" .gitignore > .gitignore
+      - name: Prepare tag
+        id: prepare_tag
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          TAG_NAME="${GITHUB_REF##refs/tags/}"
+          echo "::set-output name=tag_name::build-${TAG_NAME}"
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          exclude_assets: .github,node_modules,src,!*.json
+          publish_branch: build
+          tag_name: ${{ steps.prepare_tag.outputs.tag_name }}
