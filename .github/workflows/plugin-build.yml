@@ -3,8 +3,6 @@ name: plugin build
 
 on:
   push:
-    branches:
-      - main
     tags:
       - v*.*.*
 
