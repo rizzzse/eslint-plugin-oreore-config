@@ -1,7 +1,7 @@
 "use strict";
 const config = {
     extends: [
-        "./configs/import",
+        "./import",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
     ],
     overrides: [

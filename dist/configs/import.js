@@ -2,7 +2,7 @@
 const util_1 = require("../util");
 const config = {
     extends: [
-        "./configs/base",
+        "./base",
         "plugin:import/recommended",
         "plugin:import/typescript",
         "plugin:import/react",

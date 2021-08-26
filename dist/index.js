@@ -1,10 +1,7 @@
 "use strict";
-const baseConfig = require("./configs/base");
-const importConfig = require("./configs/import");
-const standardConfig = require("./configs/standard");
 const configs = {
-    base: baseConfig,
-    import: importConfig,
-    standard: standardConfig,
+    base: { extends: "./configs/base" },
+    import: { extends: "./configs/import" },
+    standard: { extends: "./configs/standard" },
 };
 module.exports = { configs };
