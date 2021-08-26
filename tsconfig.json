@@ -1,0 +1,14 @@
+{
+    "include": ["**/*"],
+    "typeAcquisition": {
+        "exclude": ["dist", "tests"]
+    },
+    "compilerOptions": {
+        "outDir": "./dist",
+        "moduleResolution": "node",
+        "module": "CommonJS",
+        "target": "ES2020",
+        "strict": true,
+        "importsNotUsedAsValues": "error",
+    },
+}

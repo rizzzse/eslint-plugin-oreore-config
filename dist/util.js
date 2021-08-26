@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.error = exports.ERROR = exports.warn = exports.WARN = exports.OFF = exports.never = exports.always = void 0;
+exports.always = "always";
+exports.never = "never";
+exports.OFF = "off";
+exports.WARN = "warn";
+exports.warn = (...options) => [exports.WARN, ...options];
+exports.ERROR = "error";
+exports.error = (...options) => [exports.ERROR, ...options];
